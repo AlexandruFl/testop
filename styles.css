@@ -168,6 +168,26 @@ body {
     display: none;
   }
 
+/* A DOUA PAGINA DIN LANDING */
+
+.textul {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descriere1 {
+  animation: slideLeft 1s;
+}
+
+.descriere2 {
+  animation: slideRight 1s;
+}
+
+
+
+
   /* FOR SMALLER SCREENS UNDER 700px */
 
   @media(max-width:900px){
@@ -184,7 +204,7 @@ body {
       display:flex;
       flex-direction: column;
       position: absolute;
-      background-color: red; 
+      background-color: rgb(110, 108, 108); 
       height: 100vh;
       width: 80px;
       top:0;
@@ -194,6 +214,7 @@ body {
       opacity:0.90;
       border-left: solid black 2px;
       align-items: center;
+      transition: 1s;
     }
     .content {
       position: absolute;
@@ -216,9 +237,33 @@ body {
       align-self: left;
       color: white;
     }
+    .hideMenu{
+      align-self: center;
+    }
     .showMenu{
       display: inline-block;
       position: relative;
       top: 10px;
     }
   }
+
+  /* ANIMATII */
+
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-300px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideRight {
+      from {
+        transform: translateX(300px);
+      }
+  
+      to {
+        transform: translateX(0);
+      }
+  
