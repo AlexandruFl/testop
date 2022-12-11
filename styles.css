@@ -4,17 +4,56 @@
 }
 
 body {
-    
+    font-family: 'Roboto';
 }
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  background-color: wheat;
+  font-size: 12px;
+}
+
+.telefon,.mail,.adresa {
+  gap: 15px;
+}
+
+.telefon {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.mail {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.adresa {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+}
+
+#adresaid {
+
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #D2122E;
+    background-color: #4863A0;
     padding: 20px;
     border-bottom:solid 5px wheat;
-    position: static;
+    border-top:solid 5px wheat;
+
 }
 
 .logo {
@@ -39,8 +78,13 @@ body {
 }
 
 .element {
-    text-decoration: none;
-    color: wheat;
+  list-style-type: none;
+  color: wheat;
+  text-decoration: none;
+}
+
+.element1 {
+  list-style-type: none;
 }
 
 .proiecte {
@@ -65,9 +109,19 @@ body {
     display: block;
   }
 
-  .proiecte-content:hover {background-color: #ddd;}
+  .proiecte-content:hover {
+    background-color: #ddd;
+    overflow: visible;
+    z-index: 999;
+  }
 
-  .proiecte:hover .proiecte-content {display: block;}
+  .proiecte:hover .proiecte-content {
+    display: block;
+    border: solid 2px wheat;
+  }
+
+
+/* PRIMA PARTE DIN LANDING PAGE */
 
   .bgimage { 
     position:absolute;
@@ -87,7 +141,7 @@ body {
   .presentation {
     z-index: 1;
     position: relative;
-    height: 700px;
+    height: 87.5vh;
     color: black;
     display: flex;
     flex-direction: column;
@@ -103,4 +157,62 @@ body {
 
   .sectionone {
     border-bottom:solid 5px wheat;
+  }
+
+  .showMenu, .hideMenu {
+    display: none;
+  }
+
+  /* FOR SMALLER SCREENS UNDER 700px */
+
+  @media(max-width:700px){
+    .contact {
+      display: flex;
+      font-size: 8px;
+    }
+    .telefon,.mail,.adresa {
+      display: flex;
+      flex-direction: column;
+      gap:0px;
+    }
+    .rightsidenav {
+      display:flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: red; 
+      height: 100vh;
+      width: 80px;
+      top:0;
+      right:-200px;
+      text-align: center;
+      z-index: 2;
+      opacity:0.90;
+      border-left: solid black 2px;
+      align-items: center;
+    }
+    .content {
+      position: absolute;
+      top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap:25px;
+
+    }
+    .leftsidenav {
+      position: relative;
+      left: 50%;
+    }
+    .navbar {
+      padding-top: 5px;
+    }
+    .showMenu, .hideMenu {
+      display: block;
+      cursor: pointer;  
+      align-self: left;
+      color: white;
+    }
+    .showMenu{
+      position: relative;
+      top: 10px;
+    }
   }
