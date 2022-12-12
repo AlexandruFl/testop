@@ -15,7 +15,7 @@ body {
   position:fixed;
   display: flex;
   flex-direction: column;
-  right:25px;
+  right:3vw;
   top:50vh;
   gap:25px;
   z-index: 999;
@@ -32,8 +32,8 @@ body {
   justify-content: space-around;
   height: 5vh;
   background-color: wheat;
-  font-size: 12px;
-  padding-top: 10px;
+  font-size: 1vh;
+  padding-top: 1vh;
 }
 
 .telefon,.mail,.adresa {
@@ -161,12 +161,12 @@ body {
 
   h1 {
     font-family: 'Permanent Marker', cursive;
-    font-size:45px;
+    font-size:5vw;
   }
   
   h4 {
     font-family: 'Permanent Marker', cursive; 
-    font-size:30px;
+    font-size:3vw;
   }
 
   .sectionone {
@@ -200,10 +200,7 @@ body {
   /* FOR SMALLER SCREENS UNDER 700px */
 
   @media(max-width:900px){
-    .contact {
-      display: flex;
-      font-size: 8px;
-    }
+
     .telefon,.mail,.adresa {
       display: flex;
       flex-direction: column;
@@ -254,7 +251,7 @@ body {
       position: relative;
       top: 10px;
     }
-
+/*
   h1 {
     font-family: 'Permanent Marker', cursive;
     font-size:25px;
@@ -263,16 +260,7 @@ body {
   h4 {
     font-family: 'Permanent Marker', cursive; 
     font-size:15px;
-  }
-  .punctenavigatie {
-    position:fixed;
-    display: flex;
-    flex-direction: column;
-    right:0px;
-    top:50vh;
-    gap:25px;
-    z-index: 999;
-  }
+  } */
 
   }
 
@@ -313,15 +301,15 @@ body {
         }
       }
 
-      #placa {
+      #Pereti {
         animation: slideUp 2.5s;
       }
 
-      #pereti {
+      #Geam {
         animation: slideLeft 2.5s;
       }
 
-      #acoperis {
+      #liniidrum {
         animation: slideDown 2.5s;
       }
 
