@@ -9,6 +9,8 @@ html {
 
 body {
     font-family: 'Roboto';
+    min-width: 100vw;
+    max-width: 100vw;
 }
 
 .punctenavigatie {
@@ -129,12 +131,12 @@ body {
 
   .bgimage { 
     position:absolute;
-    opacity: 0.45;
+    opacity: 0.75;
     z-index: -1;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    filter: brightness(75%);
+    filter: brightness(25%);
   }
 
   #bg {
@@ -157,6 +159,8 @@ body {
 
   .titluri {
     position: relative;
+    padding-left: 5vw;
+    
   }
 
   h1 {
@@ -167,6 +171,9 @@ body {
   h4 {
     font-family: 'Permanent Marker', cursive; 
     font-size:3vw;
+  }
+  h1, h4 {
+    color: white;
   }
 
   .sectionone {
@@ -250,6 +257,9 @@ body {
       display: inline-block;
       position: relative;
       top: 10px;
+    }
+    .titluri {
+      padding-left: 5vw;
     }
 /*
   h1 {
