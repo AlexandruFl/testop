@@ -160,6 +160,10 @@ body {
     position: relative;
   }
 
+  h1 {
+    font-size: 40px;
+  }
+
   .sectionone {
     border-bottom:solid 5px wheat;
   }
@@ -266,4 +270,32 @@ body {
       to {
         transform: translateX(0);
       }
-  
+    }
+      @keyframes slideDown{
+        from {
+          transform: translateY(-300px);
+        }
+        to {transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideUp {
+        from {
+          transform: translateY(300px);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      #placa {
+        animation: slideUp 2.5s;
+      }
+
+      #pereti {
+        animation: slideLeft 2.5s;
+      }
+
+      #acoperis {
+        animation: slideDown 2.5s;
+      }
