@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
     <title>TES TOP CONSTRUCT</title>
 </head>
-<body id="test">
+<body>
     <div class="bgimage"><img id="bg" src="images/bgphoto.jpg"></div>
     <div class="punctenavigatie">
         <svg id="sectiuneUnu" onClick="document.getElementById('primasectiune').scrollIntoView()" width="30px" height="30px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,26 +23,26 @@
                 <path d="M9.875 7.5C9.875 8.81168 8.81168 9.875 7.5 9.875C6.18832 9.875 5.125 8.81168 5.125 7.5C5.125 6.18832 6.18832 5.125 7.5 5.125C8.81168 5.125 9.875 6.18832 9.875 7.5Z" fill="white"/>
                 </svg>
     </div>
-<section id="primasectiune">
+<section id="primasectiune" style="color:wheat;">
     <div class="contact">
         <div class="telefon">
-            <img src="images/phone.svg">
-            <p style="color:white">0757.533.332</p>
+            <img id="siglatel" src="images/phone.svg">
+            <p>0757.533.332</p>
         </div>
         <div class="mail">
-            <img src="images/mail.svg">
-            <p style="color:white">alexalexanderu@gmail.com</p>
+            <img id="plic" src="images/mail.svg">
+            <p>alexalexanderu@gmail.com</p>
         </div>
         <div class="adresa">
-            <img src="images/pin.svg">
-            <p style="color:white" id="adresaid">Str.SpiruHaret</p>
+            <img id="pin" src="images/pin.svg">
+            <p id="adresaid">Str.Spiru<br>Haret</p>
         </div>
         <div class="menu-btn" >
-            <div class="menu-btn_burger" onclick="showMenu()"></div>
+            <div class="menu-btn_burger" id="menu-btn_burger" onclick="showMenu()"></div>
         </div>
     </div>
  
-    <div class="navbar">
+
         <div id="js" class="rightsidenav">
                <div class="content">
                 <div class="proiecte">
@@ -86,8 +86,7 @@
                 <rect width="810" height="707" fill="white"/>
                 </clipPath>
                 </defs>
-                </svg>
-                
+                </svg> 
                 </a>
             
             <div class="titluri">
@@ -134,7 +133,17 @@
                 menuBtn.classList.remove('open');
                 menuOpen = false;
             }
-        });
+        })
+
+            const header = document.querySelector(".contact");    
+
+            window.addEventListener("scroll", function ramaneHeader(){
+                
+                header.classList.toggle("sticky", window.scrollY > 0);
+
+                
+
+            });
     </script>
 </body>
 </html>
